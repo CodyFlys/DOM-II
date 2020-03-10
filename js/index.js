@@ -154,15 +154,16 @@ window.addEventListener("resize", event => {
 })
 
 
+document.getElementById("intro").addEventListener("click", event => {
+    event.target.style.backgroundColor = "red";
+})
+
 
 document.querySelectorAll("p").forEach(function (item){
     item.addEventListener("click", event => {
+        event.stopPropagation() // propagation? // propagation? // propagation? // propagation? // propagation?
         item.style.color = "red";
-        event.stopPropagation()
     })
-})
-
-document.querySelector("text-content")
 })
 
 
